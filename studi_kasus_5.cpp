@@ -2,7 +2,7 @@
 int main(){
     int angka1,angka2,multiply,sum;
     float rata_rata; 
-    do{
+    while(true){
         std::cout << "Masukkan angka pertama: ";
         std::cin >> angka1;
         std::cout << "Masukan angka kedua: ";
@@ -12,12 +12,14 @@ int main(){
         multiply = angka1 * angka2;
         if(sum > 200){
             std::cout << "*" << " \n";
+        }else if(angka1 == 0 && angka2 == 0){
+            break;
         }else{
             std::cout << "Rata-rata dua bilangan: " << rata_rata << std::endl;
             std::cout << "Hasil perkalian =" << angka1 << " x " << angka2 << " = " << multiply << std::endl;
         }
 
-    }while(~(angka1 != 0 && angka2 != 0));
+    }
     /*
     program harus berhenti jika kedua input bernilai 0 maka ->
     operator "~" = negasi dari kondisi angka1 != 0 && angka2 != 0
